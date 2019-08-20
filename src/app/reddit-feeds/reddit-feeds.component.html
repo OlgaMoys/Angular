@@ -1,0 +1,23 @@
+<div class="container">
+    <h4> Reddit Feeds </h4>   
+    <p class="api-url"> {{ apiUrl }} </p>
+</div>
+        
+<div class="container">
+    <div class = "feeds" *ngFor="let result of results let i = index">
+        <a routerLink="/{{ result.data.id }}" routerLinkActive="active">
+            <div class="content">
+                <div class="column-1">
+                    <p class="score"> {{ result.data.score }} </p>
+                </div>
+                <div class="column-2">
+                    <p class="name"> Created by {{ result.data.author_fullname }} {{ result.data.permalink }}</p>
+                    <span class="link-text"> {{ result.data.link_flair_text }} </span>
+                    <p class="title"> {{ result.data.title }} </p>
+                    <p class="text"> {{ result.data.selftext }} comments</p>
+                    <p class="number-comments"> {{ result.data.num_comments }} comments</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container container-details" *ngIf="redditFeed">
+    <div class="content">
+        <div class="column-1">
+            <p class="score"> {{ redditFeed.score }} </p>
+        </div>
+        <div class="column-2">
+            <p class="name"> Created by {{ redditFeed.author_fullname }} {{ redditFeed.permalink }}</p>
+            <span class="link-text"> {{ redditFeed.link_flair_text }} </span>
+            <p class="title"> {{ redditFeed.title }} </p>
+            <p class="text"> {{ redditFeed.selftext }} comments</p>
+            <p class="number-comments"> {{ redditFeed.num_comments }} comments</p>
+        </div>
+    </div>
+    <div class="comments" *ngFor="let result of redditComments let i = index">
+        <div class="content">
+            <div> 
+                <span class="author"> {{ result.data.author}} </span>
+                <span class="score"> {{ result.data.score}} points</span> <!-- Not sure if this is the right data for the "2 points" in Reddit -->
+                <p class="text"> {{ result.data.body }} </p>
+            </div>
+        </div>
+    </div>
+</div>      
+
+
