@@ -97,3 +97,9 @@ a:hover {
     color: #fff;
     font-size: 12px;
 }
+
+/* Pagination style */
+
+.ngx-pagination{
+    text-align: center;
+}
