@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RedditFeedsComponent } from './reddit-feeds/reddit-feeds.component';
 import { FeedDetailsComponent } from './feed-details/feed-details.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FeedDetailsComponent } from './feed-details/feed-details.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent],
